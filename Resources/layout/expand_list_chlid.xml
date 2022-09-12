@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+   >
+    <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+    <CheckBox
+        android:id="@+id/cb_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_marginLeft="0dp"
+        android:paddingRight="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+     
+    <TextView
+        android:id="@+id/txtChildText"
+           
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:text="Text"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="47.5dp"
+        android:ellipsize="end"
+        android:textSize="15dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:layout_toLeftOf="@+id/imageortext"
+        android:layout_centerVertical="true"/>
+        
+    <ImageView
+        android:id="@+id/imageortext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/computericon_one"
+        android:visibility="gone"
+        android:paddingTop="22dp"
+        android:paddingRight="22dp"        
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:text="Draft"
+        android:textSize="16dp"
+        android:id="@+id/textorimage"
+        android:textStyle="italic"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingRight="19dp"        
+        android:layout_alignParentRight="true"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

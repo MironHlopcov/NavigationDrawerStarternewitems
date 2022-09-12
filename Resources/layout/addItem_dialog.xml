@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- android:theme="@style/AppTheme.AppBarOverlay"-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+       android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingEnd="16dp"
+            android:paddingStart="6dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="?android:attr/actionModeCloseDrawable" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarlayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/wrap_aut_comp_tv_OperationTyp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dp"
+                android:layout_marginBottom="0.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_marginLeft="10.0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:errorEnabled="true"
+                android:hint="@string/label_OperationTyp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/aut_comp_tv_OperationTyp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                     android:imeOptions="actionDone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/wrap_texstInput_OperationTSumm"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.0dp"
+                android:layout_marginBottom="0.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_marginLeft="10.0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:errorEnabled="true"
+                android:hint="@string/label_OperationTSumm">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/texstInput_OperationTSumm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                     android:imeOptions="actionDone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.0dp"
+                android:layout_marginBottom="0.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_marginLeft="10.0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/linearLayoutDateTime">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textfield_DateCheck"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:startIconDrawable="@drawable/material_ic_calendar_black_24dp"
+                    app:endIconMode="clear_text"
+                    app:endIconDrawable="@drawable/material_ic_clear_black_24dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/label_OperationDate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/texstInput_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:inputType="datetime"
+                         android:imeOptions="actionDone"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textfield_TimeCheck"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:startIconDrawable="@drawable/ic_clock_black_24dp"
+                    app:endIconMode="clear_text"
+                    app:endIconDrawable="@drawable/material_ic_clear_black_24dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:hint="@string/label_OperationTime">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/texstInput_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:inputType="datetime"
+                         android:imeOptions="actionDone"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.0dp"
+                android:layout_marginBottom="0.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_marginLeft="10.0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:errorEnabled="true"
+                android:hint="@string/label_OperationDiscription">
+
+                <AutoCompleteTextView
+                    android:id="@+id/aut_comp_tv_OperationDiscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                     android:imeOptions="actionDone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.0dp"
+                android:layout_marginBottom="10.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_marginLeft="10.0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="@string/label_OperationMccCode">
+
+                <AutoCompleteTextView
+                    android:id="@+id/aut_comp_tv_OperationMccCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                     android:imeOptions="actionDone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="@string/label_OperationMccDiscription">
+
+                <AutoCompleteTextView
+                    android:id="@+id/aut_comp_tv_OperationMccDiscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                     android:imeOptions="actionDone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+			<com.google.android.material.textfield.TextInputLayout
+			  android:id="@+id/wrap_texstInput_CreateChip"
+			  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:layout_marginTop="0.0dp"
+			  android:layout_marginBottom="0.0dp"
+			  android:layout_marginRight="10.0dp"
+			  android:layout_marginLeft="10.0dp"
+			  app:layout_constraintLeft_toLeftOf="parent"
+			  app:layout_constraintRight_toRightOf="parent"
+			  app:layout_constraintTop_toTopOf="parent"
+			  app:errorEnabled="true"
+			  android:hint="@string/label_CreateChip">
+
+				<com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/texstInput_CreateChip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+					android:inputType="text"
+					android:imeOptions="actionDone" />
+
+			</com.google.android.material.textfield.TextInputLayout>
+
+
+
+			<com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        app:chipSpacingHorizontal="4dp">
+     
+    </com.google.android.material.chip.ChipGroup>
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

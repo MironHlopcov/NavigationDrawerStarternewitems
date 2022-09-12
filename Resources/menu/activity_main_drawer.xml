@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_import"
+            android:icon="@drawable/my_scan_ic"
+            android:title="Import from PDF-file" />
+        <item
+            android:id="@+id/nav_upload"
+            android:icon="@android:drawable/ic_menu_upload"
+            android:title="Upload database-file" />
+		<item
+            android:id="@+id/nav_restore"
+            android:icon="@drawable/ic_menu_download"
+            android:title="Restore database-file" />
+        <item
+            android:id="@+id/nav_db_clear"
+            android:icon="@drawable/my_delete_ic"
+            android:title="Delete data from database-file" />
+		<item
+		   android:id="@+id/nav_dubl_search"
+		   android:icon="@drawable/my_delete_ic"
+		   android:title="Search for duplicate entries" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="Tools" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

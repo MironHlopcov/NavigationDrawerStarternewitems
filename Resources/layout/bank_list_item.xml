@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ItemTestImage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_bank"
+        android:layout_marginRight="10.0dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sms_number_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/ItemTestImage"
+        android:ellipsize="end"
+        android:lines="1"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_marginLeft="10.0dp" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bank_name_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/colorAccent"
+        android:textSize="12dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/ItemTestImage"
+        android:layout_below="@+id/sms_number_TextView"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginLeft="10.0dp"/>
+
+</RelativeLayout>

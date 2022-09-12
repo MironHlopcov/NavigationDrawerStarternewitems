@@ -1,0 +1,123 @@
+﻿{
+  "Banks": [
+    {
+      "Name": "Belarusbank",
+      "SmsNumber": "ASB.BY",
+      "PaymentTemplates": [ "OPLATA" ],
+      "DepositTemplates": [ "ZACHISLENIE" ],
+      "СashTemplates": [ "NALICHNYE" ],
+      "SmsParseRegex": {
+        "OperacionTyp": "^[A-Z]{1,}",
+        "Sum": "(([0-9]{1,}.[0-9]{1,})(?= BYN | RUB ))",
+        "Karta": "(?<=KARTA #)[0-9]{4,4}",
+        "Date": "(?<=DATA )(\\d\\d\\.\\d\\d.\\d\\d\\d\\d\\s\\d\\d\\:\\d\\d\\:\\d\\d)",
+        "Descripton": "(?<=(?<=DATA )(\\d\\d\\.\\d\\d.\\d\\d\\d\\d\\s\\d\\d\\:\\d\\d\\:\\d\\d))([^>]{1,})(?=>)|(?=ZACHISLENIE)([\\s\\S]{1,})(?=\\s(\\d{1,}\\.\\d\\d BYN |\\d{1,}\\.\\d\\d RUB ){1,})",
+        "MCC": "(?<=MCC:)(\\d\\d\\d\\d)",
+        "Balance": "(?<=OSTATOK )([0-9]{1,}.[0-9]{1,})(?= BYN)"
+      },
+      "PdfReportTemplate": {
+        "FirstColumnName": "Номер карты",
+        "CollamnCount": 11,
+        "NomrColumnOfOperacionTyp": "6",
+        "PaymentsName": "Расход",
+        "DepositsName": "Приход",
+        "CashMCCs": "6011 6011",
+        "NomrColumnOfSum": "8",
+        "NomrColumnOfKarta": "0",
+        "NomrColumnOfDate": "1",
+        "NomrColumnOfDescripton": "4",
+        "NomrColumnOfMCC": "10",
+        "NomrColumnOfBalance": "9"
+      }
+    },
+    {
+      "Name": "Belarusbank",
+      "SmsNumber": "Mbank",
+      "PaymentTemplates": [ "OPLATA" ],
+      "DepositTemplates": [ "ZACHISLENIE" ],
+      "СashTemplates": [ "NALICHNYE" ],
+      "SmsParseRegex": {
+        "OperacionTyp": "^[A-Z]{1,}",
+        "Sum": "(([0-9]{1,}.[0-9]{1,})(?= BYN | RUB ))",
+        "Karta": "(?<=KARTA #)[0-9]{4,4}",
+        "Date": "(?<=DATA )(\\d\\d\\.\\d\\d.\\d\\d\\d\\d\\s\\d\\d\\:\\d\\d\\:\\d\\d)",
+        "Descripton": "(?<=(?<=DATA )(\\d\\d\\.\\d\\d.\\d\\d\\d\\d\\s\\d\\d\\:\\d\\d\\:\\d\\d))([^>]{1,})(?=>)|(?=ZACHISLENIE)([\\s\\S]{1,})(?=\\s(\\d{1,}\\.\\d\\d BYN |\\d{1,}\\.\\d\\d RUB ){1,})",
+        "MCC": "(?<=MCC:)(\\d\\d\\d\\d)",
+        "Balance": "(?<=OSTATOK )([0-9]{1,}.[0-9]{1,})(?= BYN)"
+      },
+      "PdfReportTemplate": {
+        "FirstColumnName": "Номер карты",
+        "CollamnCount": 11,
+        "NomrColumnOfOperacionTyp": "6",
+        "PaymentsName": "Расход",
+        "DepositsName": "Приход",
+        "CashMCCs": "6011 6011",
+        "NomrColumnOfSum": "8",
+        "NomrColumnOfKarta": "0",
+        "NomrColumnOfDate": "1",
+        "NomrColumnOfDescripton": "4",
+        "NomrColumnOfMCC": "10",
+        "NomrColumnOfBalance": "9"
+      }
+    },
+    {
+      "Name": "AlfaBank",
+      "SmsNumber": "Alfa",
+      "PaymentTemplates": [ "Spisanie" ],
+      "DepositTemplates": [ "Popolnenie" ],
+      "СashTemplates": [ "Nalichnie" ],
+      "SmsParseRegex": {
+        "OperacionTyp": "^(?<=(Karta.{1,})\\r|(Karta.{1,})\\n|(Karta.{1,})\\r\\n)[^\\r\\n]{1,}",
+        "Sum": "(?<=Summa:)([ 0-9.]{1,})(?= BYN| RUB)",
+        "Karta": "(?<=(Karta[0-9 ]{1,}.))([0-9]{1,4})",
+        "Date": "(\\d\\d\\.\\d\\d.\\d\\d\\d\\d\\s\\d\\d\\:\\d\\d\\:\\d\\d)",
+        "Descripton": "(.{1,}\\n|.{1,}\\r|.{1,}\\r\\n)(?=(\\d\\d\\.\\d\\d.\\d\\d\\d\\d\\s\\d\\d\\:\\d\\d\\:\\d\\d))",
+        "MCC": "(?<=MCC:)(\\d\\d\\d\\d)",
+        "Balance": "(?<=Ostatok:)([ 0-9.]{1,})(?= BYN| RUB)"
+      },
+      "PdfReportTemplate": {
+        "FirstColumnName": "Номер карты",
+        "CollamnCount": 11,
+        "NomrColumnOfOperacionTyp": "6",
+        "PaymentsName": "Расход",
+        "DepositsName": "Приход",
+        "CashMCCs": "6011 6011",
+        "NomrColumnOfSum": "8",
+        "NomrColumnOfKarta": "0",
+        "NomrColumnOfDate": "1",
+        "NomrColumnOfDescripton": "4",
+        "NomrColumnOfMCC": "10",
+        "NomrColumnOfBalance": "9"
+      }
+    },
+    {
+      "Name": "2222222",
+      "SmsNumber": "1111111111111111",
+      "PaymentTemplates": [ "OPLATA", "OPLATE" ],
+      "DepositTemplates": [ "ZACHISLENIE" ],
+      "СashTemplates": [ "NALICHNYE" ],
+      "SmsParseRegex": {
+        "OperacionTyp": "^[A-Z]{1,}",
+        "Sum": "(([0-9]{1,}.[0-9]{1,})(?= BYN | RUB ))",
+        "Karta": "(?<=KARTA #)[0-9]{4,4}",
+        "Date": "(?<=DATA )(\\d\\d\\.\\d\\d.\\d\\d\\d\\d\\s\\d\\d\\:\\d\\d\\:\\d\\d)",
+        "Descripton": "(?<=(?<=DATA )(\\d\\d\\.\\d\\d.\\d\\d\\d\\d\\s\\d\\d\\:\\d\\d\\:\\d\\d))([^>]{1,})(?=>)|(?=ZACHISLENIE)([\\s\\S]{1,})(?=\\s(\\d{1,}\\.\\d\\d BYN |\\d{1,}\\.\\d\\d RUB ){1,})",
+        "MCC": "(?<=MCC:)(\\d\\d\\d\\d)",
+        "Balance": "(?<=OSTATOK )([0-9]{1,}.[0-9]{1,})(?= BYN)"
+      },
+      "PdfReportTemplate": {
+        "FirstColumnName": "Номер карты",
+        "CollamnCount": 11,
+        "NomrColumnOfOperacionTyp": "7",
+        "NomrColumnOfSum": "8",
+        "NomrColumnOfKarta": "0",
+        "NomrColumnOfDate": "1",
+        "NomrColumnOfDescripton": "4",
+        "NomrColumnOfMCC": "11",
+        "NomrColumnOfBalance": "9"
+      }
+    }
+  ]
+}
+
+                                                 

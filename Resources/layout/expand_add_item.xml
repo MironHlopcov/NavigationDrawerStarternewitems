@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:background="@color/colorPrimary"-->
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="53dp"
+    android:gravity="center">
+    
+    <TextView
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/label" />
+   
+        
+    <androidx.appcompat.widget.AppCompatTextView
+            android:minWidth="25dp"
+            android:minHeight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/searchView"/>
+   
+    <ListView
+            android:minWidth="25dp"
+            android:minHeight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewToSearchView" />
+   
+
+</LinearLayout>
+

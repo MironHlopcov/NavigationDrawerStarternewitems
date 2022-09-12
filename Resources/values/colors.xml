@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	 <color name="colorPrimary">#424242</color>
+	 <color name="colorPrimaryDark">#1b1b1b</color>
+
+	<color name="colorPrimaryNight">#707070</color>
+	<color name="colorPrimaryDarkNight">#1b1b1b</color>
+	
+	 <color name="colorPrimaryVariant">#fafafa</color>
+	 <color name="colorOnPrimary">#fafafa</color>
+
+	 <color name="colorAccent">#00600f</color>
+	<color name="colorAccentNight">#00600f</color>
+
+	 <color name="colorSecondary">#00600f</color>
+	 <color name="colorSecondaryNight">#00600f</color>
+	 <color name="colorOnSecondary">#fafafa</color>
+	 <color name="colorSecondaryVariant">#00600f</color>
+
+	<color name="colorOnSurface">#f5f5f5</color>
+	<color name="colorSurface">#1b1b1b</color>
+</resources>
+	
+    <!--<color name="colorPrimary">#455a64</color>
+    <color name="colorPrimaryDark">#7f0000</color>
+	<color name="colorPrimaryLight">#4c8c4a</color>
+    <color name="colorAccent">#aed581</color>
+    <color name="controlNormal">#9e9e9e</color>
+    <color name="controlBackgroundLicht">#f9683a</color>
+    <color name="controlBackgroundDarck">#7f0000</color>
+    <color name="controlTextLicht">#ffd95a</color>
+    <color name="controlTextDarck">#c17900</color>
+	
+	
+	
+	<color name="colorPrimary">#005005</color>
+	 <color name="colorPrimaryDark">#007769</color>
+	 <color name="colorPrimaryVariant">#fafafa</color>
+	 <color name="colorOnPrimary">#fafafa</color>
+
+	 <color name="colorAccent">#005005</color>
+
+	 <color name="colorSecondary">#007769</color>
+	 <color name="colorOnSecondary">#fafafa</color>
+	 <color name="colorSecondaryVariant">#48a697</color>
+
+	<color name="colorOnSurface">#f5f5f5</color>
+	<color name="colorSurface">#424242</color>
+	
+	
+	
+	-->
+	
+
+	
+

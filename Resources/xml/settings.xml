@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	
+	<!--<PreferenceCategory android:title="Главные">
+
+		<Preference
+			 android:key="key_start_View"
+			 android:title="TestActyviti"
+			 android:summary="1234">
+		</Preference>
+
+		<EditTextPreference
+		    android:defaultValue="http://stackoverflow.com/"
+		    android:dialogTitle="Specify the remote server: "
+		    android:inputType="textUri"
+		    android:key="serverAddress"
+		    android:maxLines="1"
+		    android:summary="somesSummaryText"
+		    android:title="Server Address"
+		    android:persistent="true" />
+
+		<ListPreference
+			android:defaultValue="3"
+			android:dialogTitle="@string/remind_to_take_a_break"
+			android:entries="@array/pref_remind_me_to_take_a_break"
+			android:entryValues="@array/pref_duration"
+			android:key="@string/key_upload_quality"
+			android:summary="@string/remind_me"
+			android:title="@string/remind_me" />
+
+
+		<SwitchPreference
+			android:defaultValue="false"
+			android:key="@string/remind_me_for_bed_time"
+			android:title="@string/remind_for_bed_time" />
+
+
+		<SwitchPreference
+			android:defaultValue="false"
+			android:key="@string/limit_data_usage"
+			android:summary="@string/stream_video"
+			android:title="@string/limit_mobile_usage" />
+
+
+		<ListPreference
+			android:defaultValue="1"
+			android:dialogTitle="@string/double_tap_to_seek"
+			android:entries="@array/pref_seek_values"
+			android:entryValues="@array/pref_duration"
+			android:key="@string/pref_seek_val"
+			android:summary="@string/seconds"
+			android:title="@string/double_tap_to_seek" />
+
+
+		<ListPreference
+			android:defaultValue="1"
+			android:dialogTitle="@string/uploads"
+			android:entries="@array/pref_uploads"
+			android:entryValues="@array/pref_duration"
+			android:key="@string/pref_uploads"
+			android:summary="@string/specify_network_prefs"
+			android:title="Uploads" />
+
+
+		<SwitchPreference
+			android:defaultValue="false"
+			android:key="@string/prefs_restricted_mode"
+			android:summary="@string/restricated_mode"
+			android:title="@string/restricated_mode_description" />
+
+
+		<SwitchPreference
+			android:defaultValue="false"
+			android:key="@string/prefs_enable_stats"
+			android:title="@string/enable_stats" />
+
+	</PreferenceCategory>-->
+
+
+
+	<PreferenceCategory android:title="Внешний вид и тема">
+		<ListPreference
+			android:defaultValue="1"
+			android:dialogTitle="@string/showunreashables"
+			android:entries="@array/pref_showunreashables_entries"
+			android:entryValues="@array/pref_showunreashables_values"
+			android:key="@string/key_showunreashables"
+			android:summary="@string/showunreashables_summary"
+			android:title="@string/showunreashables" />
+	</PreferenceCategory>
+</PreferenceScreen>
