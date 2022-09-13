@@ -42,7 +42,6 @@ namespace MyFinToControl.NoScrollExList
             base.OnMeasure(widthMeasureSpec, heightMeasureSpec_custom);
             var param = this.LayoutParameters;
                param.Height = MeasuredHeight;
-                
         }
     }
 }

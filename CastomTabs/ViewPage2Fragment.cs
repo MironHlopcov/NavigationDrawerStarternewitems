@@ -8,6 +8,7 @@ using EfcToXamarinAndroid.Core;
 using Google.Android.Material.Badge;
 using Google.Android.Material.Tabs;
 using MyFinToControl.Fragments;
+using MyFinToControl.NoScrollExList;
 using OxyPlot;
 using OxyPlot.Series;
 using OxyPlot.Xamarin.Android;
@@ -38,7 +39,7 @@ namespace MyFinToControl
             public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
             {
                 var ViewAD = LayoutInflater.Inflate(Resource.Layout.tab_layout, container, false);
-                ListView listViewItems = ViewAD.FindViewById<ListView>(Resource.Id.dateslistView);
+                NoScrollListView listViewItems = ViewAD.FindViewById<NoScrollListView>(Resource.Id.dateslistView);
 
                 listViewItems.OnItemClickListener = this;
                 listViewItems.OnItemLongClickListener = this;
