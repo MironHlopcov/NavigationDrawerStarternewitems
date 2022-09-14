@@ -151,19 +151,23 @@ namespace MyFinToControl.Fragments
 
             chipGroup = view.FindViewById<ChipGroup>(Resource.Id.chip_group_main);
 
-            HashSet<string> tags = new HashSet<string>();
-            var subTtags = DatesRepositorio.DataItems == null ? null : DatesRepositorio.DataItems.Select(x => x.Title).OfType<String>().Select(x => x?.Split(" "));
-            if (subTtags != null)
+            //            HashSet<string> tags = new HashSet<string>();
+            //            var subTtags = DatesRepositorio.DataItems == null ? null : DatesRepositorio.DataItems.Select(x => x.Title).OfType<String>().Select(x => x?.Split(" "));
+            //            if (subTtags != null)
+            //            {
+            //                foreach (var tag in subTtags)
+            //                {
+            //                   tags.UnionWith(tag);
+            //               }
+            var tags = DatesRepositorio.GetTags();
+            if (tags != null)
             {
-                foreach (var tag in subTtags)
-                {
-                    tags.UnionWith(tag);
-                }
                 foreach (string tag in tags)
                 {
                     GreateChip(tag, inflater);
                 }
             }
+            //            }
 
             #endregion
 

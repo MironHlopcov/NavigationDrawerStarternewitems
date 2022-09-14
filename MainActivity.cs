@@ -373,13 +373,19 @@ namespace MyFinToControl
                     _RightMenu.AddChekFilterItem("MCC код", DatesRepositorio.DataItems.Select(x => x.MCC.ToString()).Distinct().ToList());
                     _RightMenu.AddChekFilterItem("MCC описание", DatesRepositorio.DataItems.Select(x => x.MccDeskription?.ToString()).Distinct().ToList());
 
-                    HashSet<string> tags = new HashSet<string>();
-                    var subTtags = DatesRepositorio.DataItems.Select(x => x.Title).OfType<String>().Where(x => x != "").Select(x => x.Split(" "));
-                    foreach (var tag in subTtags)
-                    {
-                        tags.UnionWith(tag);
-                    }
-                    _RightMenu.AddChekFilterItem("Тег", tags.ToList());
+                   //// Dictionary<string,int> tagsWithMass = new Dictionary<string,int>();
+
+                   ////// HashSet<string> tags = new HashSet<string>();
+                   //// var subTtags = DatesRepositorio.DataItems.Select(x => x.Title).OfType<String>().Where(x => x != "").Select(x => x.Split(" "));
+                   //// foreach (var tags in subTtags)
+                   //// {
+                   ////     foreach (var tag in tags)
+                   ////     {
+                   ////         if (!tagsWithMass.TryAdd(tag, 1))
+                   ////             tagsWithMass[tag]++;
+                   ////     }
+                   //// }
+                    _RightMenu.AddChekFilterItem("Тег", DatesRepositorio.GetTags());
 
                     drawer.OpenDrawer(GravityCompat.End);
 

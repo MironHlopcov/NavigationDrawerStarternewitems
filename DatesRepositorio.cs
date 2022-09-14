@@ -41,7 +41,7 @@ namespace MyFinToControl
         {
             try
             {
-                if (DataItems.Count==0)
+                if (DataItems.Count == 0)
                 {
                     using (var db = new DataItemContext(dbFullPath))
                     {
@@ -168,8 +168,8 @@ namespace MyFinToControl
         }
         private static void UpdateAutLists(List<DataItem> dataItems)
         {
-          //  var stopWatch = new Stopwatch();
-          //  stopWatch.Start();
+            //  var stopWatch = new Stopwatch();
+            //  stopWatch.Start();
 
             List<DataItem> ordetDataItems = dataItems.OrderBy(x => x.Date).Reverse().ToList();
             if (!GetPayments(ordetDataItems).Equals(Payments))
@@ -197,8 +197,8 @@ namespace MyFinToControl
                 UnreachableChanged?.Invoke(Unreachable, EventArgs.Empty);
             }
 
-           // stopWatch.Stop();
-           // Console.WriteLine(stopWatch.Elapsed);
+            // stopWatch.Stop();
+            // Console.WriteLine(stopWatch.Elapsed);
         }
         public static async Task UpdateItemValue(int id, DataItem newValue)
         {
@@ -259,6 +259,22 @@ namespace MyFinToControl
             return dataItems?.Where(x => x.OperacionTyp == OperacionTyps.UNREACHABLE).ToList();
         }
 
+        public static List<string> GetTags()
+        {
+            Dictionary<string, int> tagsWithMass = new Dictionary<string, int>();
+            var subTtags = DatesRepositorio.DataItems.Select(x => x.Title).OfType<String>().Where(x => x != "").Select(x => x.Split(" "));
+            foreach (var tags in subTtags)
+            {
+                foreach (var tag in tags)
+                {
+                    if (!tagsWithMass.TryAdd(tag, 1))
+                        tagsWithMass[tag]++;
+                }
+            }
+            return tagsWithMass.OrderBy(x => x.Value).Reverse().Select(x => x.Key).ToList();
+        }
+
+        #region Filter
         public static MFilter MFilter
         {
             get
@@ -272,6 +288,6 @@ namespace MyFinToControl
         {
             UpdateAutLists(((MFilter)sender).OutDataItems);
         }
-
+        #endregion
     }
 }

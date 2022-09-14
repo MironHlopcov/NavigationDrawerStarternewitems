@@ -171,17 +171,21 @@ namespace MyFinToControl.Fragments
             //Распаршевать из строки разделенной пробелмами
             chipGroup = view.FindViewById<ChipGroup>(Resource.Id.chip_group_main);
 
-            HashSet<string> tags = new HashSet<string>();
-            var subTtags = DatesRepositorio.DataItems.Select(x => x.Title).OfType<String>().Select(x => x?.Split(" "));
-            foreach (var tag in subTtags)
+            //HashSet<string> tags = new HashSet<string>();
+            //var subTtags = DatesRepositorio.DataItems.Select(x => x.Title).OfType<String>().Select(x => x?.Split(" "));
+            //foreach (var tag in subTtags)
+            //{
+            //    tags.UnionWith(tag);
+            //}
+            var tags = DatesRepositorio.GetTags();
+            if (tags != null)
             {
-                tags.UnionWith(tag);
-            }
-            var checkedChips = selectedItem.Title?.Split(" ");
-            foreach (string tag in tags)
-            {
-                bool isChecked = checkedChips?.Contains(tag) ?? false;
-                GreateChip(tag, isChecked, inflater);
+                var checkedChips = selectedItem.Title?.Split(" ");
+                foreach (string tag in tags)
+                {
+                    bool isChecked = checkedChips?.Contains(tag) ?? false;
+                    GreateChip(tag, isChecked, inflater);
+                }
             }
             #endregion
 
