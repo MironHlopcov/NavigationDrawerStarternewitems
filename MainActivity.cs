@@ -366,12 +366,12 @@ namespace MyFinToControl
                     filterFragmentTransaction.Commit();
                     _RightMenu.FiltredList = DatesRepositorio.DataItems.Select(x => x.Descripton).Distinct().ToList<string>();
 
-                    _RightMenu.AddChekFilterItem("Карта", DatesRepositorio.DataItems.Select(x => x.Karta.ToString()).Distinct().ToList());
+                    _RightMenu.AddChekFilterItem("Карта", DatesRepositorio.DataItems.Select(x => x.Karta.ToString()).Distinct().OrderBy(x => x).ToList());
                     //_RightMenu.AddChekFilterItem("Категория по умолчанию", DatesRepositorio.DataItems.Select(x => x.DefaultCategoryTyps.ToString()).Distinct().ToList());
                     //_RightMenu.AddChekFilterItem("Пользовательская категория", DatesRepositorio.DataItems.Select(x => x.CastomCategoryTyps.ToString()).Distinct().ToList());
 
-                    _RightMenu.AddChekFilterItem("MCC код", DatesRepositorio.DataItems.Select(x => x.MCC.ToString()).Distinct().ToList());
-                    _RightMenu.AddChekFilterItem("MCC описание", DatesRepositorio.DataItems.Select(x => x.MccDeskription?.ToString()).Distinct().ToList());
+                    _RightMenu.AddChekFilterItem("MCC код", DatesRepositorio.DataItems.Select(x => x.MCC.ToString()).Distinct().OrderBy(x=>x).ToList());
+                    _RightMenu.AddChekFilterItem("MCC описание", DatesRepositorio.DataItems.Select(x => x.MccDeskription?.ToString()).Distinct().OrderBy(x => x).ToList());
 
                    //// Dictionary<string,int> tagsWithMass = new Dictionary<string,int>();
 
