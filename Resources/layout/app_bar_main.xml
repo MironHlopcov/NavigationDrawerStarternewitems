@@ -32,7 +32,62 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?attr/actionBarSize">
-               
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Balance"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.0dp"
+                    android:layout_marginBottom="0.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:layout_marginLeft="1.0dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:errorEnabled="true"
+                    android:hint="Баланс">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/texstInput_Balance"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:inputType="none"
+                        android:editable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            
+                     <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Recomendet"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_toRightOf="@+id/Balance"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.0dp"
+                    android:layout_marginBottom="0.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:layout_marginLeft="1.0dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:errorEnabled="true"
+                    android:hint="Рекомендации">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/texstInput_recom_speid"
+                        android:textSize="15dp"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:inputType="none"
+                        android:editable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="55dp"
@@ -45,7 +100,8 @@
                     android:gravity="center"
                     android:layout_toLeftOf = "@+id/max_sped"
                     android:layout_marginEnd="8dp"
-                    android:id="@+id/recomendet_sped" />
+                    android:id="@+id/recomendet_sped"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -58,7 +114,8 @@
                     android:textColor="@color/design_dark_default_color_background"
                     android:background="@drawable/bg_red"
                     android:gravity="center"
-                    android:id="@+id/max_sped" />
+                    android:id="@+id/max_sped" 
+                     android:visibility="gone"/>
 
 
             </RelativeLayout>

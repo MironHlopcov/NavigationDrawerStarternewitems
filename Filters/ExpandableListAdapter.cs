@@ -83,6 +83,7 @@ namespace MyFinToControl.Filters
             imageSource = (ImageView)convertView.FindViewById(Resource.Id.imagearrow);
             chekBox = (CheckBox)convertView.FindViewById(Resource.Id.cb_group);
             txtView.Text = groupItem.Key.Name;
+
             chekBox.Checked = groupItem.Key.IsCheked;
             chekBox.Tag = groupName;
             chekBox.Click += ChekBox_Click;
@@ -128,12 +129,18 @@ namespace MyFinToControl.Filters
             chekBox.Checked = childItem.IsCheked;
             chekBox.Tag = groupName;
 
+
             chekBox.Click += Child_ChekBox_Click;
+            //txtHeader.Click += (s, e) =>
+            //{
+            //    chekBox.Checked = !chekBox.Checked;
+            //    Child_ChekBox_Click((object)chekBox, e);
+            //};
 
             txtHeader.Text = groupItem.Value[childPosition].Name;
             //txtHeader.SetTextColor(Android.Graphics.Color.ParseColor("#ff4891"));
 
-           
+
             return convertView;
         }
 
@@ -152,7 +159,7 @@ namespace MyFinToControl.Filters
             else
                 grItem.Key.IsCheked = false;
 
-           
+
 
             this.NotifyDataSetChanged();
         }

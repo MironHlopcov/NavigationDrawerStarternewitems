@@ -70,9 +70,13 @@
 		<item name="android:textColor">?attr/colorOnPrimary</item>
 	</style>
 	
+	<style name="App.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+		
+		<item name="android:textColor">?attr/colorOnPrimary</item>
+	</style>
 	
-	
-<!--
+
+	<!--
 	<style name="DarkTheme">
 		
 		<item name="colorPrimary">@color/colorPrimary</item>
